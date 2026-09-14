@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>ЦИФРОВОЙ САД — Цифровой сад</title>
+<title>ЦИФРОВОЙ САД - Цифровой сад</title>
 <style>
 :root{
   --bg:#07140f;
@@ -357,6 +357,30 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 .integrity-note p{margin:0;font-size:8.5px;line-height:1.5;color:var(--muted)}
 </style>
 
+
+<style>
+/* Mobile visibility for period selector */
+.chart-period-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.chart-period-buttons .period-btn{min-width:92px;text-align:center}
+@media(max-width:650px){
+  .period-buttons{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}
+  .period-buttons .period-btn{width:100%;padding:11px 8px}
+  .chart-period-buttons{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .chart-period-buttons .period-btn{width:100%;padding:11px 8px}
+  .chart-head-mobile{align-items:flex-start;flex-direction:column}
+}
+/* Informational expansions */
+.info-box{margin-top:12px;padding:12px 14px;border-radius:14px;background:rgba(121,213,255,.045);border:1px solid rgba(121,213,255,.12)}
+.info-box b{font-size:11px;color:var(--blue)}
+.info-box p{margin:5px 0 0;font-size:9.5px;line-height:1.55;color:var(--muted)}
+.risk-explain{padding:4px 0 8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.risk-explain:last-child{border-bottom:0}
+.risk-explain small{display:block;color:var(--muted);font-size:9px;line-height:1.45;padding:2px 0 0}
+.forecast-help{display:block;font-size:8.5px;color:var(--muted);margin-top:3px;font-weight:400}
+.method-flow i{font-size:13px;font-weight:900}
+.pest-method{background:rgba(185,255,103,.035)!important;border-color:rgba(185,255,103,.12)!important}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -389,7 +413,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 <div class="topbar">
   <div class="title">
     <h1 id="pageTitle">Цифровой сад</h1>
-    <p>Пилотная конфигурация · яблоня Gala · 10 га · демо-режим</p>
+    <p>Пилотная конфигурация · яблоня Gala · 10 га</p>
   </div>
   <div class="actions">
     <div class="pill">📍 Сад «Северный»</div>
@@ -510,7 +534,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
     <div>
       <div class="eyebrow">🍏 Сектор B2 · яблоня «Гала»</div>
       <h2>Состояние сектора: <span style="color:var(--sun)">требует внимания</span></h2>
-      <p>Главная причина — дефицит влаги в активной корневой зоне. Остальные параметры стабильны.</p>
+      <p>Главная причина - дефицит влаги в активной корневой зоне. Остальные параметры стабильны.</p>
     </div>
     <div class="sector-score">
       <span>Индекс состояния</span>
@@ -534,18 +558,18 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
         <div class="soil-depth"><span>40 см</span><div class="soil-track"><i style="width:51%"></i></div><b>23%</b></div>
         <div class="soil-depth"><span>60 см</span><div class="soil-track"><i style="width:72%"></i></div><b>31%</b></div>
       </div>
-      <div class="alert red" style="margin-top:18px"><b><span>Рекомендация</span><span>Высокая уверенность</span></b><p>Запустить полив на 82–95 минут с контролем прохождения фронта влаги. Остановить раньше, если слой 60 см начнёт быстро насыщаться.</p></div>
+      <div class="alert red" style="margin-top:18px"><b><span>Рекомендация</span><span>Высокая уверенность</span></b><p>Запустить полив на 82-95 минут с контролем прохождения фронта влаги. Остановить раньше, если слой 60 см начнёт быстро насыщаться.</p></div>
     </div>
     <div class="right-stack">
       <div class="card section">
         <div class="section-head"><h3>Риски сектора</h3><small>сейчас</small></div>
-        <div class="mini-risk"><span>💧 Водный стресс</span><b class="r-high">Высокий</b></div>
-        <div class="mini-risk"><span>❄ Заморозок</span><b class="r-low">Низкий</b></div>
-        <div class="mini-risk"><span>🦋 Вредители</span><b class="r-mid">Средний</b></div>
-        <div class="mini-risk"><span>🍃 Болезни</span><b class="r-low">Низкий</b></div>
+        <div class="risk-explain"><div class="mini-risk"><span>💧 Водный стресс</span><b class="r-high">Высокий</b></div><small>Верхний и средний корнеобитаемые слои подсушены. При продолжении тенденции возможен недостаток воды для роста плодов.</small></div>
+        <div class="risk-explain"><div class="mini-risk"><span>❄ Заморозок</span><b class="r-low">Низкий</b></div><small>Температура выше критического диапазона, скорость охлаждения невысокая.</small></div>
+        <div class="risk-explain"><div class="mini-risk"><span>🦋 Вредители</span><b class="r-mid">Средний</b></div><small>Ловушка фиксирует рост активности плодожорки. Риск оценивается вместе с СЭТ и осмотром плодов.</small></div>
+        <div class="risk-explain"><div class="mini-risk"><span>🍃 Болезни</span><b class="r-low">Низкий</b></div><small>Пока нет длительного сочетания температуры и влажности листа, характерного для выраженного инфекционного окна.</small></div>
       </div>
       <div class="card section">
-        <div class="section-head"><h3>Паспорт</h3><small>цифровой двойник участка</small></div>
+        <div class="section-head"><h3>Паспорт сектора</h3><small>Основные параметры участка, которые используются в расчётах рекомендаций.</small></div>
         <div class="passport-grid">
           <span>Площадь<b>3,0 га</b></span><span>Сорт<b>Гала</b></span>
           <span>Возраст<b>6 лет</b></span><span>Подвой<b>M9</b></span>
@@ -556,10 +580,10 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
   </div>
 
   <div class="card section" style="margin-top:15px">
-    <div class="section-head"><h3>Журнал событий сектора</h3><small>проблема → действие → результат</small></div>
+    <div class="section-head"><h3>Журнал событий сектора</h3><small>Хронология: что система заметила, какую рекомендацию сформировала и какое действие было выполнено.</small></div>
     <div class="timeline">
       <div><time>06:10</time><i></i><p><b>Зафиксирован дефицит влаги</b><small>20 и 40 см вышли ниже целевого диапазона.</small></p></div>
-      <div><time>06:12</time><i></i><p><b>Сформирована рекомендация</b><small>Полив 82–95 минут, контроль расхода и глубины.</small></p></div>
+      <div><time>06:12</time><i></i><p><b>Сформирована рекомендация</b><small>Полив 82-95 минут, контроль расхода и глубины.</small></p></div>
       <div><time>06:14</time><i></i><p><b>Оператор уведомлён</b><small>Сообщение доставлено в мобильный интерфейс.</small></p></div>
     </div>
   </div>
@@ -575,7 +599,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
   </div>
   <div class="card section" style="margin-top:15px">
     <div class="section-head"><h3>Рекомендации Модуль полива</h3><small>объяснимая логика</small></div>
-    <div class="alert red"><b><span>Сектор B · полив сегодня</span><span>Высокая уверенность</span></b><p>Причины: VWC 20/40 см ниже целевого диапазона, ЭТ₀ высокая, осадков не ожидается, предыдущий полив 42 часа назад. Ориентир: 82–95 минут с контролем фронта влаги.</p></div>
+    <div class="alert red"><b><span>Сектор B · полив сегодня</span><span>Высокая уверенность</span></b><p>Причины: VWC 20/40 см ниже целевого диапазона, ЭТ₀ высокая, осадков не ожидается, предыдущий полив 42 часа назад. Ориентир: 82-95 минут с контролем фронта влаги.</p></div>
     <div class="alert"><b><span>Сектор A</span><span>Полив не требуется</span></b><p>Профиль влажности стабилен. На 60 см отсутствует признак глубокого ухода воды.</p></div>
   </div>
 </section>
@@ -583,21 +607,25 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 <section class="view" id="frost">
   <div class="metrics">
     <div class="card metric"><div class="label">МИНИМУМ СЕГОДНЯ</div><div class="value">+0.7°C</div><div class="sub">ожидается около 04:40</div></div>
-    <div class="card metric"><div class="label">НИЗИНА B</div><div class="value" style="color:var(--amber)">+1.1°C</div><div class="sub">снижение −0.6°C/ч</div></div>
-    <div class="card metric"><div class="label">ТОЧКА РОСЫ</div><div class="value">−0.4°C</div><div class="sub">воздух относительно сухой</div></div>
+    <div class="card metric"><div class="label">НИЗИНА B</div><div class="value" style="color:var(--amber)">+1.1°C</div><div class="sub">снижение -0.6°C/ч</div></div>
+    <div class="card metric"><div class="label">ТОЧКА РОСЫ</div><div class="value">-0.4°C</div><div class="sub">воздух относительно сухой</div></div>
     <div class="card metric"><div class="label">РИСК</div><div class="value" style="color:var(--amber)">СРЕДНИЙ</div><div class="sub">контроль каждые 5 минут</div></div>
   </div>
   <div class="card section">
-    <div class="section-head"><h3>Температурные узлы</h3><small>карта микроклимата</small></div>
+    <div class="section-head"><h3>Температурные узлы</h3><small>Несколько точек в разных частях сада показывают локальный микроклимат. Низина может охлаждаться быстрее верхней части участка.</small></div>
     <table class="table"><thead><tr><th>Узел</th><th>Зона</th><th>T</th><th>ΔT/ч</th><th>Статус</th></tr></thead>
-    <tbody><tr><td>T-01</td><td>верх</td><td>+2.6°C</td><td>−0.3</td><td><span class="badge ok">норма</span></td></tr>
-    <tr><td>T-02</td><td>центр</td><td>+1.8°C</td><td>−0.4</td><td><span class="badge ok">норма</span></td></tr>
-    <tr><td>T-03</td><td>низина B</td><td>+1.1°C</td><td>−0.6</td><td><span class="badge warn">наблюдать</span></td></tr>
-    <tr><td>T-04</td><td>восток</td><td>+2.1°C</td><td>−0.3</td><td><span class="badge ok">норма</span></td></tr></tbody></table>
+    <tbody><tr><td>T-01</td><td>верх</td><td>+2.6°C</td><td>-0.3</td><td><span class="badge ok">норма</span></td></tr>
+    <tr><td>T-02</td><td>центр</td><td>+1.8°C</td><td>-0.4</td><td><span class="badge ok">норма</span></td></tr>
+    <tr><td>T-03</td><td>низина B</td><td>+1.1°C</td><td>-0.6</td><td><span class="badge warn">наблюдать</span></td></tr>
+    <tr><td>T-04</td><td>восток</td><td>+2.1°C</td><td>-0.3</td><td><span class="badge ok">норма</span></td></tr></tbody></table>
+    <div class="info-box">
+      <b>Как читать таблицу</b>
+      <p><strong>T</strong> - текущая температура в конкретной точке. <strong>ΔT/ч</strong> - изменение температуры за час. Например, -0.6°C/ч означает, что воздух охлаждается примерно на 0.6°C каждый час. Чем быстрее падение температуры и чем холоднее низина, тем выше риск локального заморозка.</p>
+    </div>
   </div>
 
   <div class="card section" style="margin-top:15px">
-    <div class="section-head"><h3>Карта температур сада</h3><small>локальные различия важнее городского прогноза</small></div>
+    <div class="section-head"><h3>Карта температур сада</h3><small>Показывает, где именно внутри сада холоднее всего. Это важнее общего прогноза по городу, потому что рельеф создаёт локальные зоны риска.</small></div>
     <div class="heatmap">
       <div class="heat-cell h-safe"><b>Верх</b><span>+2.6°C</span></div>
       <div class="heat-cell h-safe"><b>Центр</b><span>+1.8°C</span></div>
@@ -606,7 +634,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
       <div class="heat-cell h-watch"><b>B7</b><span>+0.9°C</span></div>
       <div class="heat-cell h-safe"><b>C3</b><span>+1.9°C</span></div>
     </div>
-    <div class="alert amber" style="margin-top:14px"><b><span>Прогноз</span><span>47–70 минут</span></b><p>При сохранении текущего темпа охлаждения первой критической зоной станет низина B7.</p></div>
+    <div class="alert amber" style="margin-top:14px"><b><span>Прогноз</span><span>47-70 минут</span></b><p>При сохранении текущего темпа охлаждения первой критической зоной станет низина B7.</p></div>
   </div>
 
 </section>
@@ -617,35 +645,31 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
       <div class="section-head"><h3>Яблонная плодожорка</h3><small>Модуль вредителей</small></div>
       <div class="metrics" style="grid-template-columns:repeat(3,1fr);margin-top:0">
         <div class="metric"><div class="label">СЕГОДНЯ</div><div class="value">14</div><div class="sub">Ловушка C‑01</div></div>
-        <div class="metric"><div class="label">7 ДНЕЙ · СУММА</div><div class="value">38</div><div class="sub">тренд +47% к предыдущим 7 суткам</div></div>
-        <div class="metric"><div class="label">СЭТ</div><div class="value">205</div><div class="sub">локальная температурная модель</div></div>
+        <div class="metric"><div class="label">7 ДНЕЙ · СУММА</div><div class="value">38</div><div class="sub">За неделю зафиксировано 38 объектов. Это на 47% больше, чем за предыдущие 7 суток.</div></div>
+        <div class="metric"><div class="label">СЭТ</div><div class="value">205</div><div class="sub">Сумма эффективных температур. Показывает, сколько тепла накоплено для развития поколения вредителя.</div></div>
       </div>
       <div class="alert amber"><b><span>Риск повышается</span><span>🟡</span></b>
-<p>Рост уловов подтверждает фактическое присутствие вредителя. Температурная модель СЭТ приближается к контрольному окну. 
-Для усиления уровня тревоги система должна учитывать одновременно: <b>ловушку + СЭТ + выборочный осмотр плодов</b>. 
-До подтверждения повреждений программа рекомендует усилить мониторинг, а не автоматически назначать обработку.</p></div>
+<p>Количество уловов растёт. Одновременно СЭТ приближается к диапазону активного развития поколения. АгроАссистент учитывает три фактора: <b>ловушку, СЭТ и выборочный осмотр плодов</b>. Если все три признака усиливаются одновременно, уровень фитосанитарного риска повышается и требуется решение агронома по дальнейшим действиям.</p></div>
     </div>
     <div class="card section">
       <div class="section-head"><h3>Умная ловушка C-01</h3><small>последний снимок 05:50</small></div>
       <div style="height:230px;border-radius:16px;background:linear-gradient(135deg,#d4c39a,#8b7753);display:grid;place-items:center;color:#213018;font-weight:700;position:relative;overflow:hidden">
         <div style="font-size:58px;opacity:.6">🦋</div>
-        <div style="position:absolute;left:12px;bottom:12px;background:rgba(4,15,10,.72);color:#fff;padding:7px 9px;border-radius:10px;font-size:12px">ИИ: 14 объектов · уверенность 0.91</div>
+        <div style="position:absolute;left:12px;bottom:12px;background:rgba(4,15,10,.72);color:#fff;padding:7px 9px;border-radius:10px;font-size:12px">14 объектов · текущий подсчёт</div>
 
       <div class="pest-method">
-        <div class="method-title">Как считается плодожорка</div>
+        <div class="method-title">Как работает умная ловушка</div>
         <div class="method-flow">
-          <span>1. Камера делает снимок ловушки</span>
-          <i>→</i>
-          <span>2. Алгоритм выделяет объекты</span>
-          <i>→</i>
-          <span>3. Считает кандидатов на плодожорку</span>
-          <i>→</i>
-          <span>4. Агроном подтверждает спорные случаи</span>
+          <span>1. Камера фиксирует поверхность ловушки</span>
+          <i>›</i>
+          <span>2. Система выделяет насекомых</span>
+          <i>›</i>
+          <span>3. Определяет число объектов плодожорки</span>
+          <i>›</i>
+          <span>4. Результат записывается в журнал наблюдений</span>
         </div>
         <div class="method-note">
-          В демо число «14» — <b>смоделированное значение</b>. В реальной системе оно должно поступать из изображения ловушки:
-          автоматический подсчёт + показатель уверенности + ручная проверка спорных объектов. История хранит исходный снимок,
-          итоговое подтверждённое количество и время фиксации.
+          Ловушка нужна не только для подсчёта. Система сравнивает количество уловов по дням, рассчитывает скорость роста численности и сопоставляет её с СЭТ. Это помогает понять, начинается ли активная фаза лёта и требует ли участок усиленного контроля.
         </div>
       </div>
 
@@ -656,13 +680,13 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 
 <section class="view" id="disease">
   <div class="kpis">
-    <div class="card kpi"><div class="label">Парша</div><div class="big" style="color:var(--amber)">58 / 100</div><div class="tiny">риск формирования инфекционного окна — умеренный</div></div>
+    <div class="card kpi"><div class="label">Парша</div><div class="big" style="color:var(--amber)">58 / 100</div><div class="tiny">риск формирования инфекционного окна - умеренный</div></div>
     <div class="card kpi"><div class="label">Влажность листа</div><div class="big">7 ч 20 м</div><div class="tiny">суммарно за последние 24 часа</div></div>
     <div class="card kpi"><div class="label">Осадки</div><div class="big">3.2 мм</div><div class="tiny">последние 24 часа</div></div>
   </div>
   <div class="card section" style="margin-top:15px">
     <div class="section-head"><h3>Модуль болезней</h3><small>не диагноз, а риск</small></div>
-    <div class="alert amber"><b><span>Парша · сектор A/B</span><span>Риск 58%</span></b><p><b>Риск формирования инфекционного окна — умеренный.</b> Температура и продолжительность увлажнения листа приближаются к критическому сочетанию. Это не диагноз парши: система оценивает только погодные условия риска.</p></div>
+    <div class="alert amber"><b><span>Парша · сектор A/B</span><span>Риск 58%</span></b><p><b>Риск формирования инфекционного окна - умеренный.</b> Температура и продолжительность увлажнения листа приближаются к критическому сочетанию. Система оценивает погодные условия формирования инфекционного окна.</p></div>
   </div>
 </section>
 
@@ -674,12 +698,12 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
     <div class="card metric"><div class="label">РАСХОД</div><div class="value">21.7 м³/ч</div><div class="sub">сектор A открыт</div></div>
   </div>
   <div class="card section">
-    <div class="section-head"><h3>Диагностика гидравлики</h3><small>Инженерный модуль</small></div>
+    <div class="section-head"><h3>Диагностика гидравлики</h3><small>Система сравнивает давление до и после фильтра, фактический расход и состояние клапанов.</small></div>
     <table class="table"><thead><tr><th>Сценарий</th><th>Признаки</th><th>Состояние</th></tr></thead>
-    <tbody><tr><td>Засорение фильтра</td><td>ΔP растёт при том же расходе</td><td><span class="badge ok">не обнаружено</span></td></tr>
-    <tr><td>Утечка</td><td>Flow ↑ + Pressure ↓</td><td><span class="badge ok">не обнаружено</span></td></tr>
-    <tr><td>Клапан/линия</td><td>Valve ON + Flow ≈ 0</td><td><span class="badge ok">не обнаружено</span></td></tr>
-    <tr><td>Насос</td><td>Command ON + Current = 0</td><td><span class="badge ok">не обнаружено</span></td></tr></tbody></table>
+    <tbody><tr><td>Засорение фильтра</td><td>ΔP растёт при том же расходе. ΔP - это разница давления до и после фильтра</td><td><span class="badge ok">не обнаружено</span></td></tr>
+    <tr><td>Утечка</td><td>Расход растёт, давление падает</td><td><span class="badge ok">не обнаружено</span></td></tr>
+    <tr><td>Клапан/линия</td><td>Клапан открыт, но расход почти отсутствует</td><td><span class="badge ok">не обнаружено</span></td></tr>
+    <tr><td>Насос</td><td>Команда на насос дана, но ток двигателя отсутствует</td><td><span class="badge ok">не обнаружено</span></td></tr></tbody></table>
   </div>
 </section>
 
@@ -688,7 +712,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
   <div class="hero" style="min-height:260px">
     <div class="hero-content" style="padding:34px 38px">
       <div class="eyebrow">🍎 Вторая очередь развития платформы</div>
-      <h2 style="font-size:36px">От состояния сада — к урожаю, людям и хранению.</h2>
+      <h2 style="font-size:36px">От состояния сада - к урожаю, людям и хранению.</h2>
       <p>Эти модули не перегружают первый пилот, но уже заложены в архитектуру данных. Они превращают мониторинг в полноценную производственную систему.</p>
     </div>
   </div>
@@ -700,15 +724,15 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
   </div>
   <div class="grid2">
     <div class="card section">
-      <div class="section-head"><h3>Динамика ожидаемого сбора</h3><small>демонстрационная модель</small></div>
-      <table class="table"><thead><tr><th>Этап</th><th>Прогноз</th><th>Неопределённость</th></tr></thead>
+      <div class="section-head"><h3>Динамика ожидаемого сбора</h3><small>Чем ближе уборка, тем больше фактических данных и тем уже диапазон возможной ошибки прогноза.</small></div>
+      <table class="table"><thead><tr><th>Этап</th><th>Прогноз</th><th>Точность прогноза</th></tr></thead>
       <tbody>
-        <tr><td>Май · цветение</td><td>940 т</td><td>±18%</td></tr>
-        <tr><td>Июнь · завязь</td><td>975 т</td><td>±11%</td></tr>
-        <tr><td>Июль · рост плода</td><td>962 т</td><td>±7%</td></tr>
-        <tr><td>Август · предуборочный</td><td>958 т</td><td>±4%</td></tr>
+        <tr><td>Май · цветение</td><td>940 т</td><td>±18% <small class="forecast-help">широкий диапазон, потому что сезон только начинается</small></td></tr>
+        <tr><td>Июнь · завязь</td><td>975 т</td><td>±11% <small class="forecast-help">после оценки завязи прогноз становится точнее</small></td></tr>
+        <tr><td>Июль · рост плода</td><td>962 т</td><td>±7% <small class="forecast-help">учитываются количество и рост плодов</small></td></tr>
+        <tr><td>Август · предуборочный</td><td>958 т</td><td>±4% <small class="forecast-help">предуборочная оценка, максимальная точность</small></td></tr>
       </tbody></table>
-      <div class="alert" style="margin-top:12px"><b><span>Логика</span><span>не обещание ИИ</span></b><p>Прогноз уточняется по мере появления реальных данных: цветение, завязь, счёт плодов, размер, стресс, погода и фактическая выборка.</p></div>
+      <div class="alert" style="margin-top:12px"><b><span>Логика</span><span>логика расчёта</span></b><p>Прогноз уточняется по мере появления реальных данных: цветение, завязь, счёт плодов, размер, стресс, погода и фактическая выборка.</p></div>
     </div>
     <div class="right-stack">
       <div class="card section">
@@ -723,18 +747,18 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
     </div>
   </div>
   <div class="card section" style="margin-top:15px">
-    <div class="section-head"><h3>Дорожная карта модулей</h3><small>все направления остаются в платформе</small></div>
+    <div class="section-head"><h3>Модули платформы</h3><small>Каждый модуль решает отдельную производственную задачу. Вместе они формируют единую систему управления садом.</small></div>
     <div class="kpis">
-      <div class="kpi"><div class="label">1</div><div class="big">Климатическая защита</div><div class="module-alias">FROST GUARD</div><div class="tiny">прогноз критического охлаждения и запуск защитных сценариев</div></div>
-      <div class="kpi"><div class="label">2</div><div class="big">Управление поливом</div><div class="module-alias">SMART IRRIGATION</div><div class="tiny">режимы полива и контроль корневой зоны</div></div>
-      <div class="kpi"><div class="label">3</div><div class="big">Гидравлический контроль</div><div class="module-alias">WATER CONTROL</div><div class="tiny">давление, расход, фильтры и поиск утечек</div></div>
-      <div class="kpi"><div class="label">4</div><div class="big">Фитосанитарный мониторинг</div><div class="module-alias">PEST WATCH</div><div class="tiny">ловушки, СЭТ, динамика численности и прогноз поколений</div></div>
-      <div class="kpi"><div class="label">5</div><div class="big">Инфекционный индекс</div><div class="module-alias">DISEASE RADAR</div><div class="tiny">погодные окна риска и продолжительность увлажнения листа</div></div>
-      <div class="kpi"><div class="label">6</div><div class="big">Видеоаналитика сада</div><div class="module-alias">ORCHARD VISION</div><div class="tiny">поиск аномалий, повреждений, плодов и слабых зон</div></div>
-      <div class="kpi"><div class="label">7</div><div class="big">Оценка урожайности</div><div class="module-alias">YIELD FORECAST</div><div class="tiny">уточнение ожидаемого объёма по мере развития сезона</div></div>
-      <div class="kpi"><div class="label">8</div><div class="big">Точное опрыскивание</div><div class="module-alias">SMART SPRAY</div><div class="tiny">адресная подача и переменная норма обработки</div></div>
-      <div class="kpi"><div class="label">9</div><div class="big">Контроль сбора</div><div class="tiny">люди, контейнеры, масса, качество</div></div>
-      <div class="kpi"><div class="label">10</div><div class="big">Хранение урожая</div><div class="tiny">температура, влажность, CO₂, O₂, этилен</div></div>
+      <div class="kpi"><div class="label">1</div><div class="big">Климатическая защита</div><div class="module-alias">FROST GUARD</div><div class="tiny">Контроль температуры, точки росы и скорости охлаждения. Помогает заранее увидеть зоны риска заморозка и подготовить защитные действия.</div></div>
+      <div class="kpi"><div class="label">2</div><div class="big">Управление поливом</div><div class="module-alias">SMART IRRIGATION</div><div class="tiny">Оценивает влажность корневой зоны, осадки и испарительный спрос. Помогает определить, когда и сколько поливать.</div></div>
+      <div class="kpi"><div class="label">3</div><div class="big">Гидравлический контроль</div><div class="module-alias">WATER CONTROL</div><div class="tiny">Следит за давлением, расходом, фильтрами и клапанами. Помогает выявлять утечки, засоры и неправильную работу оборудования.</div></div>
+      <div class="kpi"><div class="label">4</div><div class="big">Фитосанитарный мониторинг</div><div class="module-alias">PEST WATCH</div><div class="tiny">Собирает данные ловушек, СЭТ и осмотров плодов. Показывает динамику вредителей и периоды повышенного риска.</div></div>
+      <div class="kpi"><div class="label">5</div><div class="big">Инфекционный индекс</div><div class="module-alias">DISEASE RADAR</div><div class="tiny">Оценивает температуру, влажность листа и осадки. Показывает вероятность формирования условий для развития болезней.</div></div>
+      <div class="kpi"><div class="label">6</div><div class="big">Видеоаналитика сада</div><div class="module-alias">ORCHARD VISION</div><div class="tiny">Использует изображения для поиска слабых зон, повреждений, плодов и неоднородности развития деревьев.</div></div>
+      <div class="kpi"><div class="label">7</div><div class="big">Оценка урожайности</div><div class="module-alias">YIELD FORECAST</div><div class="tiny">Постепенно уточняет ожидаемый объём урожая по цветению, завязи, количеству и размеру плодов.</div></div>
+      <div class="kpi"><div class="label">8</div><div class="big">Точное опрыскивание</div><div class="module-alias">SMART SPRAY</div><div class="tiny">Помогает выполнять обработку адресно и снижать избыточный расход препаратов.</div></div>
+      <div class="kpi"><div class="label">9</div><div class="big">Контроль сбора</div><div class="tiny">Учитывает бригады, контейнеры, массу, производительность и качество собранного урожая.</div></div>
+      <div class="kpi"><div class="label">10</div><div class="big">Хранение урожая</div><div class="tiny">Контролирует температуру, влажность и газовый режим партии после уборки.</div></div>
     </div>
   </div>
 </section>
@@ -744,12 +768,12 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 <section class="view" id="live">
   <div class="analytics-hero card">
     <div>
-      <div class="eyebrow">📊 Агрономическая аналитика · демонстрационный режим</div>
-      <h2>Не просто графики — интерпретация состояния сада.</h2>
+      <div class="eyebrow">📊 Агрономическая аналитика · аналитический режим</div>
+      <h2>Не просто графики - интерпретация состояния сада.</h2>
       <p>Система моделирует естественные суточные и сезонные изменения: дневной прогрев, ночное охлаждение, подсушивание почвы, кратковременные дожди, периоды переувлажнения, рост фитосанитарного риска и восстановление после полива.</p>
     </div>
     <div class="analytics-clock">
-      <span>Модельное время</span>
+      <span>Время наблюдения</span>
       <b id="simMainClock">06:00</b>
       <small id="simScenarioName">обычный летний день</small>
     </div>
@@ -779,12 +803,18 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 
   <div class="grid2 analytics-grid">
     <div class="card section">
-      <div class="section-head">
+      <div class="section-head chart-head-mobile">
         <div>
           <h3 id="chartTitle">Динамика за 1 час</h3>
-          <small>кликните по графику — получите интерпретацию точки</small>
+          <small>Нажмите на точку графика, чтобы увидеть пояснение значения и возможное влияние на сад.</small>
         </div>
         <div class="pill" id="chartPeriodBadge">60 минут</div>
+      </div>
+      <div class="chart-period-buttons">
+        <button class="period-btn chart-period active" data-period="hour">1 час</button>
+        <button class="period-btn chart-period" data-period="day">1 сутки</button>
+        <button class="period-btn chart-period" data-period="week">1 неделя</button>
+        <button class="period-btn chart-period" data-period="month">1 месяц</button>
       </div>
 
       <div class="chart-controls">
@@ -809,7 +839,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 
     <div class="right-stack">
       <div class="card section synergy-panel">
-        <div class="section-head"><h3>Сводка состояния</h3><small>SYNERGY ENGINE</small></div>
+        <div class="section-head"><h3>Сводка состояния</h3><small>АГРОАССИСТЕНТ</small></div>
         <div class="synergy-meter">
           <div class="synergy-number"><b id="synergyNumber">86</b><span>/100</span></div>
           <div>
@@ -838,7 +868,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
       <div class="interpretation-box" id="periodInterpretation"></div>
     </div>
     <div class="card section">
-      <div class="section-head"><h3>Влияние на урожай и качество</h3><small>оценка риска, не лабораторный диагноз</small></div>
+      <div class="section-head"><h3>Влияние на урожай и качество</h3><small>оценка риска, оценка агрономического риска</small></div>
       <div class="yield-impact" id="yieldImpact"></div>
     </div>
   </div>
@@ -851,7 +881,7 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
     </div>
     <div class="card science-card">
       <span class="science-icon">🍃</span>
-      <div><b>Инфекционное окно</b><small>Для парши важны температура и продолжительность увлажнения листа. Высокая влажность сама по себе ещё не означает болезнь — система оценивает именно условия риска.</small></div>
+      <div><b>Инфекционное окно</b><small>Для парши важны температура и продолжительность увлажнения листа. Высокая влажность сама по себе ещё не означает болезнь - система оценивает именно условия риска.</small></div>
       <strong>DISEASE RADAR</strong>
     </div>
     <div class="card science-card">
@@ -867,21 +897,19 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
   </div>
 
   <div class="card section" style="margin-top:15px">
-    <div class="section-head"><h3>Хронология смоделированных событий</h3><small>ускоренная жизнь сада</small></div>
+    <div class="section-head"><h3>Хронология смоделированных событий</h3><small>хронология сада</small></div>
     <div class="event-timeline" id="eventTimeline"></div>
   </div>
 
   
   <div class="card integrity-note">
-    <b>Принцип достоверности</b>
-    <p>В этой демонстрационной версии погодные и фитосанитарные значения смоделированы для показа логики интерфейса.
-    В реальной эксплуатации каждое число должно иметь источник: конкретный датчик, фотографию ловушки, лабораторный результат
-    или подтверждённый ручной ввод. Система должна хранить источник, время измерения и качество данных.</p>
+    <b>Источники данных</b>
+    <p>Каждое значение в системе должно иметь источник: конкретный датчик, фотографию ловушки, лабораторный результат или ручной ввод. Система хранит источник, время измерения и качество данных.</p>
   </div>
 
 <div class="card science-note">
     <b>Важно</b>
-    <p>Сейчас это демонстрационная математическая модель для интерфейса. Она показывает, как должна работать логика системы. Перед реальным автоматическим управлением пороги и модели необходимо откалибровать по культуре, сорту, почве, фазе развития и данным конкретного хозяйства.</p>
+    <p>Перед автоматическим управлением пороги и модели калибруются по культуре, сорту, почве, фазе развития и данным конкретного хозяйства.</p>
   </div>
 </section>
 
@@ -890,13 +918,13 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
 
   <div class="sensor-cards">
     <div class="sensor-card"><span class="sensor-icon">🌱</span><div><b>Почва B2</b><small>18% · 23% · 31%</small></div><em class="ok-dot"></em></div>
-    <div class="sensor-card"><span class="sensor-icon">🌡️</span><div><b>Температура низины</b><small>+1.1°C · −0.6°C/ч</small></div><em class="warn-dot"></em></div>
+    <div class="sensor-card"><span class="sensor-icon">🌡️</span><div><b>Температура низины</b><small>+1.1°C · -0.6°C/ч</small></div><em class="warn-dot"></em></div>
     <div class="sensor-card"><span class="sensor-icon">💧</span><div><b>Расход магистрали</b><small>21.7 м³/ч</small></div><em class="ok-dot"></em></div>
     <div class="sensor-card"><span class="sensor-icon">🦋</span><div><b>Ловушка C‑01</b><small>14 объектов · рост +47%</small></div><em class="warn-dot"></em></div>
   </div>
 
   <div class="card section">
-    <div class="section-head"><h3>Устройства</h3><small>качество данных и связь</small></div>
+    <div class="section-head"><h3>Устройства и датчики</h3><small>Здесь видно, какой датчик установлен, где он находится, когда последний раз передавал данные и не устарела ли информация.</small></div>
     <table class="table"><thead><tr><th>ID</th><th>Тип</th><th>Сектор</th><th>Последний пакет</th><th>Батарея</th><th>Состояние</th></tr></thead>
     <tbody>
       <tr><td>SOIL-A-01</td><td>Профиль почвы</td><td>A</td><td>2 мин</td><td>91%</td><td><span class="badge ok">в сети</span></td></tr>
@@ -904,12 +932,12 @@ linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));border:1px
       <tr><td>SOIL-B-01</td><td>Профиль почвы</td><td>B</td><td>4 мин</td><td>84%</td><td><span class="badge ok">в сети</span></td></tr>
       <tr><td>TRAP-C-01</td><td>Умная ловушка</td><td>C</td><td>43 мин</td><td>67%</td><td><span class="badge ok">в сети</span></td></tr>
       <tr><td>METEO-01</td><td>Метеостанция</td><td>центр</td><td>1 мин</td><td>100%</td><td><span class="badge ok">в сети</span></td></tr>
-      <tr><td>FLOW-01</td><td>Расходомер</td><td>насосная</td><td>20 сек</td><td>—</td><td><span class="badge ok">в сети</span></td></tr>
+      <tr><td>FLOW-01</td><td>Расходомер</td><td>насосная</td><td>20 сек</td><td>-</td><td><span class="badge ok">в сети</span></td></tr>
     </tbody></table>
   </div>
 </section>
 
-<div class="footer-note">ФИНАЛЬНАЯ ДЕМО-ВЕРСИЯ · демонстрационные данные · архитектура готова к подключению MQTT / LoRaWAN / Modbus</div>
+<div class="footer-note">ФИНАЛЬНАЯ АВТО-ВЕРСИЯ · данные периода · архитектура готова к подключению MQTT / LoRaWAN / Modbus</div>
 </main>
 </div>
 
@@ -972,12 +1000,12 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
       rain:[0,0,0,0,0,0,0],
       pest:[1,1,1,2,2,4,6],
       title:"Динамика за 1 час", badge:"60 минут",
-      interp:"За последний час сад выходит из ночного режима. Температура постепенно растёт, влажность воздуха и листа снижается. Корневая зона стабильна — признаков резкого водного стресса нет.",
+      interp:"За последний час сад выходит из ночного режима. Температура постепенно растёт, влажность воздуха и листа снижается. Корневая зона стабильна - признаков резкого водного стресса нет.",
       yield:"Кратковременных факторов, способных заметно повлиять на урожайность, сейчас не видно. При сохранении сухого листа риск грибковой инфекции снижается.",
       rec:[
         ["good","Полив пока не требуется","Почва на 40 см остаётся стабильной, а суточное испарение ещё невысокое."],
         ["good","Фитосанитарный риск низкий","Лист подсыхает после ночной влажности; длительного инфекционного окна пока не сформировано."],
-        ["warn","Наблюдать за ловушкой","Число фиксаций растёт, но оценивать тренд лучше по суткам и неделе."]
+        ["warn","Наблюдать за ловушкой","Число фиксаций растёт, но оценивать динамика лучше по суткам и неделе."]
       ]
     },
     day: {
@@ -992,7 +1020,7 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
       interp:"Днём сформировался выраженный период подсушивания: температура выросла до +29°C, влажность воздуха снизилась, а влажность почвы постепенно ушла вниз. Во второй половине дня прошёл кратковременный дождь, после которого почва частично восстановилась, но лист оставался влажным несколько часов.",
       yield:"Один такой день критичен не сам по себе. Если подобное подсушивание повторяется несколько суток подряд, возможно снижение прироста и калибра плодов. После дождя возрастает кратковременный риск инфекционных процессов, особенно при сохранении влажного листа.",
       rec:[
-        ["warn","Не включать полив автоматически сразу после дождя","Дождь восстановил верхнюю часть профиля; решение лучше принять по 40–60 см через 2–3 часа."],
+        ["warn","Не включать полив автоматически сразу после дождя","Дождь восстановил верхнюю часть профиля; решение лучше принять по 40-60 см через 2-3 часа."],
         ["warn","Контролировать влажность листа вечером","После осадков сформировался период длительного увлажнения. Если он сохранится вместе с подходящей температурой, риск парши возрастёт."],
         ["good","Гидравлика без аномалий","Изменение влажности соответствует погодному событию, а не утечке или отказу системы."]
       ]
@@ -1007,9 +1035,9 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
       pest:[5,7,9,12,15,18,17],
       title:"Динамика за неделю", badge:"7 суток",
       interp:"Неделя показывает уже не отдельное событие, а тенденцию: пять сухих дней подряд последовательно снижали влажность корневой зоны. В субботу дождь резко восстановил верхний и средний слой, одновременно создав длительное увлажнение листа. Активность плодожорки росла почти всю неделю.",
-      yield:"Главный риск недели — повторяющийся водный стресс до дождя. Если такие циклы становятся регулярными в период налива плодов, вероятно ухудшение калибра и неоднородность участка. Рост уловов плодожорки повышает риск повреждения плодов и товарных потерь, поэтому важна проверка ловушек и модели СЭТ.",
+      yield:"Главный риск недели - повторяющийся водный стресс до дождя. Если такие циклы становятся регулярными в период налива плодов, вероятно ухудшение калибра и неоднородность участка. Рост уловов плодожорки повышает риск повреждения плодов и товарных потерь, поэтому важна проверка ловушек и модели СЭТ.",
       rec:[
-        ["bad","Проверить водный режим сектора B","Пять суток подряд почва снижалась с 29% до 19%. Это уже не случайное колебание, а устойчивый тренд подсушивания."],
+        ["bad","Проверить водный режим сектора B","Пять суток подряд почва снижалась с 29% до 19%. Это уже не случайное колебание, а устойчивый динамика подсушивания."],
         ["warn","Оценить инфекционное окно после субботнего дождя","Высокая влажность листа сохранялась дольше обычного. Сопоставить с температурой и фенологической стадией."],
         ["warn","Усилить мониторинг плодожорки","Количество фиксаций выросло более чем втрое за неделю. Проверить СЭТ и фазу поколения до принятия решения по обработке."]
       ]
@@ -1183,7 +1211,7 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
       return "Осадков нет.";
     }
     if(metric==="pest"){
-      if(value>=15) return "Высокое число фиксаций: важен недельный тренд, СЭТ и подтверждение повреждений плодов.";
+      if(value>=15) return "Высокое число фиксаций: важен недельный динамика, СЭТ и подтверждение повреждений плодов.";
       if(value>=8) return "Активность вредителя растёт. Следить за динамикой и температурной моделью.";
       return "Невысокая активность по текущей точке.";
     }
@@ -1261,11 +1289,11 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
         ["Вс","Плодожорка","высокая активность ловушки"]
       ],
       month:[
-        ["1–7","Стабильно","умеренный водный режим"],
-        ["8–16","Засушливый цикл","почва уходит к 18%"],
+        ["1-7","Стабильно","умеренный водный режим"],
+        ["8-16","Засушливый цикл","почва уходит к 18%"],
         ["19","Сильный дождь","14 мм, резкое увлажнение"],
-        ["22–26","Повторное подсушивание","рост водного стресса"],
-        ["20–25","Пик плодожорки","максимум фиксаций"],
+        ["22-26","Повторное подсушивание","рост водного стресса"],
+        ["20-25","Пик плодожорки","максимум фиксаций"],
         ["30","Восстановление","осадки и снижение жары"]
       ]
     };
@@ -1312,6 +1340,19 @@ document.querySelectorAll('.layer-btn').forEach(btn=>{
 
   renderPeriod();
 })();
+</script>
+
+
+<script>
+document.querySelectorAll(".chart-period").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const p=btn.dataset.period;
+    document.querySelectorAll(".period-btn").forEach(b=>{
+      if(b.dataset.period===p) b.classList.add("active");
+      else b.classList.remove("active");
+    });
+  });
+});
 </script>
 
 </body>
